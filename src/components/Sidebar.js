@@ -18,18 +18,24 @@ export default function Sidebar() {
         </div>
         <div>
           <h2 className="sectionTitle">pour plus d'infos</h2>
-          <a className="navLink" target="_blank" href="https://playvalorant.com/fr-fr/download">
-            <img
-              src="./img/manette-icon.webp"
-              width="25px"
-            />
+          <a
+            className="navLink"
+            alt=""
+            target="_blank"
+            href="https://playvalorant.com/fr-fr/download"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/manette-icon.webp" alt="" width="25px" />
             <span className="navLabel">installer valorant</span>
           </a>
-          <a href="https://www.riotgames.com/fr" target="_blank" className="navLink">
-            <img
-              src="./img/siteweb-icon.webp"
-              width="25px"
-            />
+          <a
+            className="navLink"
+            alt=""
+            target="_blank"
+            href="https://www.riotgames.com/fr"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/siteweb-icon.webp" alt="" width="25px" />
             <span className="navLabel">site officiel</span>
           </a>
         </div>
