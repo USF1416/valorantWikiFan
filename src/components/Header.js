@@ -4,13 +4,17 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header>
-      <Link to="/" className="logoXtitle" style={{display: "flex", textDecoration: "none"}}>
+      <Link
+        to="/"
+        className="logoXtitle"
+        style={{ display: "flex", textDecoration: "none" }}
+      >
         <img
           src="./img/palorant-icon.webp"
           alt="Logo mof=difié du jeu Valorant de Riot"
           width="50px"
         />
-        <div style={{paddingLeft:"5%"}}>
+        <div style={{ paddingLeft: "5%" }}>
           <h1
             style={{
               fontSize: "1.1rem",
@@ -50,10 +54,12 @@ export default function Header() {
           className="searchBar-input"
         />
       </div>
-      <div class="darkModeButton">
+      <label class="ui-switch">
         <input type="checkbox" />
-        <label></label>
-      </div>
+        <div class="slider">
+          <div class="circle"></div>
+        </div>
+      </label>
     </header>
   );
 }
