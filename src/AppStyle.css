@@ -1,6 +1,7 @@
 body {
   background-color: #ece8e1;
 }
+
 header,
 aside {
   display: flex;
@@ -14,20 +15,35 @@ header,
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
   padding: 0 1%;
-  border-bottom: 1px solid #d4cfc7;
+  border-bottom: 1px solid #b8b5b1;
+  z-index: 10;   /* ✅ plus grand => tout passera en dessous apres scroling */
 }
 
 aside {
   position: fixed;
+  top: 10vh;
   left: 0;
-  width: 15%;
-  height: 100vh;
+  width: 17%;
+  height: 100%;
+  border-right: 1px solid #b8b5b1;
   flex-direction: column;
 }
 
+main {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  width: 82.75%;
+  height: 200vh;
+  border: 0px solid #0d0c22;
+  z-index: 1;        /* ✅ plus petit => tout passera au dessus apres scroling */
+}
 /* Header - Barre de recherche */
 .searchBar {
   display: flex;
@@ -181,3 +197,5 @@ aside {
   letter-spacing: 0.5px;
   font-size: 0.9rem;
 }
+
+/*  */

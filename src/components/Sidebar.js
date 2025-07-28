@@ -1,4 +1,3 @@
-import React from "react";
 import NavLink from "./navLink";
 
 export default function Sidebar() {
@@ -20,7 +19,6 @@ export default function Sidebar() {
           <h2 className="sectionTitle">pour plus d'infos</h2>
           <a
             className="navLink"
-            alt=""
             target="_blank"
             href="https://playvalorant.com/fr-fr/download"
             rel="noopener noreferrer"
@@ -30,7 +28,6 @@ export default function Sidebar() {
           </a>
           <a
             className="navLink"
-            alt=""
             target="_blank"
             href="https://www.riotgames.com/fr"
             rel="noopener noreferrer"
