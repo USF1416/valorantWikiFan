@@ -8,15 +8,15 @@ import Apropos from "../pages/Apropos";
 
 export default function Dashboard() {
   return (
-    <main>
+    <section>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/agents" element={<Agents />} />
         <Route path="/cartes" element={<Cartes />} />
         <Route path="/arsenal" element={<Arsenal />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/a propos" element={<Apropos />} />
       </Routes>
-    </main>
+    </section>
   );
 }

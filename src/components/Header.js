@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header>
       <Link
-        to="/home"
+        to="/"
         className="logoXtitle"
         style={{ display: "flex", textDecoration: "none" }}
       >

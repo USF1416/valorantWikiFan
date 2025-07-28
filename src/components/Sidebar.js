@@ -1,22 +1,19 @@
-import NavLink from "./navLink";
+import NavLinkSection from "./NavLinkSection";
 
 export default function Sidebar() {
   return (
     <aside className="sidebar">
       <nav className="sidebar-nav">
-        <div className="navSection">
-          <h2 className="sectionTitle">principal</h2>
-          <NavLink label="agents" />
-          <NavLink label="cartes" />
-          <NavLink label="arsenal" />
-        </div>
-        <div className="navSection">
-          <h2 className="sectionTitle">communauté</h2>
-          <NavLink label="contact" />
-          <NavLink label="a propos" />
-        </div>
+        <NavLinkSection
+          title="principale"
+          nbNavLinkInputs={["agents", "cartes", "arsenal"]}
+        />
+        <NavLinkSection
+          title="communauté"
+          nbNavLinkInputs={["contact", "a propos"]}
+        />
         <div>
-          <h2 className="sectionTitle">pour plus d'infos</h2>
+          <h2 className="AsideTitle">pour plus d'infos</h2>
           <a
             className="navLink"
             target="_blank"
