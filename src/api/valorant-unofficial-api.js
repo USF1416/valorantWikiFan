@@ -1,4 +1,3 @@
-// recupApisDatas.js
 export const fetchValorantData = async (endpoint) => {
   try {
     const response = await fetch(`https://valorant-api.com/v1/${endpoint}`);
