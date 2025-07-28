@@ -22,14 +22,14 @@ header {
   height: 10vh;
   padding: 0 1%;
   border-bottom: 1px solid #b8b5b1;
-  z-index: 10;   /* ✅ plus grand => tout passera en dessous apres scroling */
+  z-index: 10; /* ✅ plus grand => tout passera en dessous apres scroling */
 }
 
 aside {
   position: fixed;
   top: 10vh;
   left: 0;
-  width: 17%;
+  width: 35vh;
   height: 100%;
   border-right: 1px solid #b8b5b1;
   flex-direction: column;
@@ -38,11 +38,11 @@ aside {
 main {
   position: absolute;
   top: 10vh;
+  left: 35vh;
   right: 0;
-  width: 82.75%;
-  height: 200vh;
-  border: 0px solid #0d0c22;
-  z-index: 1;        /* ✅ plus petit => tout passera au dessus apres scroling */
+  height: auto;
+  border: 1px solid #0d0c22;
+  z-index: 1; /* ✅ plus petit => tout passera au dessus apres scroling */
 }
 /* Header - Barre de recherche */
 .searchBar {
