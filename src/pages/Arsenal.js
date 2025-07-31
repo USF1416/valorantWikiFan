@@ -1,27 +1,29 @@
-import { useEffect, useState } from "react";
-import { fetchValorantData } from "../api/valorant-unofficial-api";
 import NavHeader from "../components/NavHeader";
+import GroupWeaponsCard from "../components/GroupWeaponsCard";
 
 export default function Arsenal() {
-  const [weapons, setWeapons] = useState([]);
-  const headerSubtitle = "Guide complet de toutes les armes avec statistiques détaillées et conseils d'utilisation";
-
-  useEffect(() => {
-    const getWeapons = async () => {
-      const data = await fetchValorantData("weapons");
-      setWeapons(data);
-    };
-    getWeapons();
-  }, []);
-
+  const headerSubtitle =
+    "Guide complet de toutes les armes avec statistiques détaillées et conseils d'utilisation";
+  const weaponCategoryTab = {
+    "pistols": [1, "1 / span 2"],
+    "smgs": [2, 1],
+    "shotguns": [2, undefined],
+    "rifles": [3, "1 / span 2"],
+    "sniper rifles": [4, 1],
+    "heavy weapons": [4, undefined],
+  };
   return (
-    <main className="arsenalContainer">
-      <NavHeader title="Arsenal Valorant" subtitle={headerSubtitle} />
-      <ul>
-        {weapons.map((weapon) => (
-          <li key={weapon.uuid}>{weapon.displayName}</li>
+    <>
+      <NavHeader title="Arsenal" subtitle={headerSubtitle} />
+      <div class="weaponsCardsDashboard">
+        {Object.entries(weaponCategoryTab).map(([category, position]) => (
+          <GroupWeaponsCard
+            categoryLabel={category}
+            column={position[0]}
+            row={position[1]}
+          />
         ))}
-      </ul>
-    </main>
+      </div>
+    </>
   );
 }

@@ -1,8 +1,8 @@
 export default function NavHeader({ title, subtitle }) {
   return (
-    <div className="arsenalHeader">
-      <h1 className="sectionTitle">{title}</h1>
-      <p className="sectionSubtitle">{subtitle}</p>
+    <div style={{ marginBottom: "2rem", border:"1px solid black" }}>
+      <h1 className="headerTitle">{title}</h1>
+      <p className="headerSubtitle">{subtitle}</p>
     </div>
   );
 }

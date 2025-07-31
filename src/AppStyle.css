@@ -41,9 +41,16 @@ section {
   left: 35vh;
   right: 0;
   height: auto;
-  border: 1px solid #1206f8;
+  padding: 10px;
+  border: 2px solid #1206f8;
   z-index: 1; /* ✅ plus petit => tout passera au dessus apres scroling */
 }
+
+main {
+  padding: 10vh;
+  border: 2px solid red;
+}
+
 /* Header - Barre de recherche */
 .searchBar {
   display: flex;
@@ -158,7 +165,8 @@ section {
   margin-bottom: 2rem;
 }
 
-.AsideTitle {
+.AsideTitle,
+.weaponCategoryTitle {
   padding: 0 1rem;
   font-size: 0.8rem;
   font-weight: 600;
@@ -198,7 +206,80 @@ section {
   font-size: 0.9rem;
 }
 
-/* Page Arsenal */
-.arsenalContainer {
-  border: 1px solid red;
+/* Header dans les pages Nav */
+.headerTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f1419;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.headerSubtitle {
+  font-size: 1.1rem;
+  color: #5a5a5a;
+  max-width: 600px;
+}
+
+/* Présentation de l'Arsenal */
+.weaponsCardsDashboard {
+  display: grid;
+  grid-template-columns: repeat(4, max-width);
+  gap: 0.5rem;
+  justify-content: center;
+  border: 2px solid #e11515;
+}
+
+/* Card de l'Arsenal */
+.WeaponCard {
+  position: relative;
+  width: 14rem;
+  height: 7rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 59, 59, 0.705);
+  border: 3px solid rgb(93, 89, 89);
+  transform: scaleX(-1);
+}
+
+.WeaponCard:hover {
+  background: rgba(57, 153, 124, 0.808);
+  border: 4px solid rgb(51, 254, 201);
+}
+
+.WeaponCard:active {
+  background: linear-gradient(
+    to top,
+    rgba(57, 153, 124, 0.4),
+    rgba(50, 50, 50, 0.7) 90%
+  );
+  border: 3px solid rgb(51, 254, 201);
+}
+
+.WeaponCard,
+.WeaponCard:hover,
+.WeaponCard:active {
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.WeaponCardHeader {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.45rem 0.75rem;
+  text-align: right;
+  transform: scaleX(-1);
+}
+
+.WeaponCardHeaderText {
+  font-size: 0.9rem;
+  color: rgb(187, 187, 188);
+  text-transform: uppercase; /* le nom*/
+  font-weight: bold; /* le prix*/
+  margin: 0;
 }
