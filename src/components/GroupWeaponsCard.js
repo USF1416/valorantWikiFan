@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchValorantData } from "../api/valorant-unofficial-api";
 import WeaponsCard from "../components/WeaponsCard";
 
-export default function GroupWeaponsCard({ categoryLabel, column, row }) {
+export default function GroupWeaponsCard({ categoryLabel }) {
   const [weapons, setWeapons] = useState([]);
 
   useEffect(() => {
@@ -24,23 +24,20 @@ export default function GroupWeaponsCard({ categoryLabel, column, row }) {
       .sort((a, b) => (a.shopData.cost ?? 0) - (b.shopData.cost ?? 0));
 
   return (
-    <div
-      style={{
-        gridColumn: `${column}`,
-        gridRow: `${row}`,
-      }}
-    >
-      <h2 className="weaponCategoryTitle" style={{ textAlign: "center" }}>
-        {categoryLabel}
-      </h2>
-      {getWeaponsByCategory(categoryLabel).map((weapon) => (
-        <WeaponsCard
-          key={weapon.uuid}
-          name={weapon.displayName}
-          price={weapon.shopData?.cost ?? "owned"}
-          image={weapon.shopData?.newImage ?? weapon.displayIcon}
-        />
-      ))}
-    </div>
+    <>
+      <div>
+        <h2 className="weaponCategoryTitle" style={{ textAlign: "center" }}>
+          {categoryLabel}
+        </h2>
+        {getWeaponsByCategory(categoryLabel).map((weapon) => (
+          <WeaponsCard
+            key={weapon.uuid}
+            name={weapon.displayName}
+            price={weapon.shopData?.cost ?? "owned"}
+            image={weapon.shopData?.newImage ?? weapon.displayIcon}
+          />
+        ))}
+      </div>
+    </>
   );
 }

@@ -222,13 +222,6 @@ main {
 }
 
 /* Présentation de l'Arsenal */
-.weaponsCardsDashboard {
-  display: grid;
-  grid-template-columns: repeat(4, max-width);
-  gap: 0.5rem;
-  justify-content: center;
-  border: 2px solid #e11515;
-}
 
 /* Card de l'Arsenal */
 .WeaponCard {
@@ -252,7 +245,7 @@ main {
 
 .WeaponCard:active {
   background: linear-gradient(
-    to top,
+    top,
     rgba(57, 153, 124, 0.4),
     rgba(50, 50, 50, 0.7) 90%
   );
