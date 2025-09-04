@@ -10,15 +10,17 @@ export default function Arsenal() {
       <NavHeader title="Arsenal" subtitle={headerSubtitle} />
       <div
         class="weaponsCardsDashboard"
-        style={{display: "flex" }}
+        style={{ display: "flex", border: "1px solid blue" }}
       >
-        <GroupWeaponsCard categoryLabel="pistols" />
-        <div>
+        <GroupWeaponsCard
+          categoryLabel="pistols"
+        />
+        <div style={{ border: "1px solid red" }}>
           <GroupWeaponsCard categoryLabel="smgs" />
           <GroupWeaponsCard categoryLabel="shotguns" />
         </div>
         <GroupWeaponsCard categoryLabel="rifles" />
-        <div>
+        <div style={{ border: "1px solid red" }}>
           <GroupWeaponsCard categoryLabel="sniper rifles" />
           <GroupWeaponsCard categoryLabel="heavy weapons" />
         </div>
